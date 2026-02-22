@@ -1,0 +1,806 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@font-face {
+	font-family: 'MuseoCyrl-700';
+	src: url('../fonts/museocyrl-700.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/museocyrl-700.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/museocyrl-700.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/museocyrl-700.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/museocyrl-700.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/museocyrl-700.svg#museocyrl-700') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'MuseoCyrl-900';
+	src: url('../fonts/museocyrl-900.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/museocyrl-900.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/museocyrl-900.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/museocyrl-900.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/museocyrl-900.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/museocyrl-900.svg#museocyrl-900') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'ALSRubl';
+	src: url('../fonts/alsrubl.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/alsrubl.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/alsrubl.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/alsrubl.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/alsrubl.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/alsrubl.svg#alsrubl') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffF;
+    color:#202020;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.orange {
+    color: #ff5f01;
+}
+
+.fs24 {
+    font-size: 24px;
+}
+
+section {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"], textarea {
+    border-width: 1px;
+    padding: 10px 20px;
+    font-family: 'Open Sans';
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    display: block;
+    font-size: 14px;
+    font-family: "Open Sans Semibold";
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea, textarea:hover, textarea:focus, textarea:active {
+    outline:none;
+} 
+
+
+.gray_half_fon {
+    width: 100%;
+    background-image: url("../img/fon_gray_half.png");
+    background-repeat: repeat-x;
+    background-position-x: 0;
+    background-position-y: 100%;
+}
+
+.gray_fon {
+    width: 100%;
+    background-image: url("../img/fon_gray.png");
+}
+
+
+h1 {
+    font-size: 38px;
+    font-family: "MuseoCyrl-700";
+    color: rgb(32, 32, 32);
+    line-height: 1.579;
+    text-align: center;    
+}
+
+.cladding_block > h1 {
+    padding: 53px 0;
+} 
+
+h2 {
+    font-size: 25px;
+    font-family: "MuseoCyrl-700";
+    color: rgb(32, 32, 32);
+    line-height: 1;
+    text-align: center;
+}
+
+.cladding_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+}
+.cladding_item {
+    width: 370px;
+    padding-bottom: 37px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.cladding_item > h2 {
+    padding: 32px 0 40px 0;
+}
+
+.cladding_item:hover {
+    box-shadow: 0px 0px 50px 0px rgba(32, 32, 32, 0.25);
+}
+
+.cladding_item:hover > button:after {
+    content: 'Подробнее';
+}
+
+.cladding_item_image > img {
+    width: 100%;
+}
+
+.cladding_item  > button {
+    color: rgb(255, 255, 255);
+    background-color: #4d59a1;
+    width: 140px;    
+}
+
+.cladding_item  > button:after {
+    content: 'Заказать'
+}
+
+.variants_block > h1 {
+    padding: 67px 0 26px 0;
+}
+
+.variants_block > p {
+    font-family: "Open Sans";
+    font-size: 16px;
+    margin: 0 35px;
+    line-height: 1.5;
+} 
+
+.variants_mosaic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 52px 0 68px 0;
+}
+
+.variants_mosaic > .mosaic_item {
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding-right: 35px;
+    padding-bottom: 0;
+    padding-left: 40px;
+}
+
+.mosaic_item_wrap {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+}
+
+.mosaic_item_wrap > img {
+    opacity: 0.6;
+}
+
+.mosaic_item > h2 {
+    position: relative;
+    display: block;
+    text-align: left;
+    color: #ffffff;
+}
+
+.hovered_gray {
+    cursor: pointer;
+    position: relative;
+}
+
+.hovered_gray > .focus_text {    
+    position: relative;
+    display: block;
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: transparent;
+}
+
+.hovered_gray:hover > .mosaic_item_wrap > img {
+    opacity: 0.35;
+}
+
+.hovered_gray:hover > .focus_text {
+    color: #ffffff;
+}
+
+.hovered_gray:hover > .price {
+    display: none;
+}
+
+.hovered_gray:hover > button {
+    display: block;
+}
+
+.hovered_gray > button {
+    position: relative;
+    display: none;
+    margin: 0;
+    background-color: #ff5f01;
+    color: #ffffff;
+}
+
+.mosaic_item > .price {
+    position: relative;
+    display: block;
+    text-align: left;
+    font-size: 24px;
+    font-family: "MuseoCyrl-700";
+    color: rgb(255, 255, 255);
+    line-height: 1;
+}
+
+.price_bold {
+    font-family: "MuseoCyrl-900";
+    font-size: 36px;
+}
+
+.price_rubl {
+    font-family: "ALSRubl";
+    font-weight: normal;
+}
+
+.price_rubl24 {
+    font-family: "ALSRubl";
+    font-size: 24px;    
+}
+
+.vertical_plate {
+    width: 386px;
+    height: 450px;
+    padding-top: 70px;
+}
+
+.vertical_plate > h2 {
+    line-height: 1.2;
+    height: 86px;
+}
+
+.vertical_plate > .focus_text {
+    line-height: 1.571;
+    height: 195px;
+}
+
+.horizontal_plate {
+    width: 582px;
+    height: 300px;
+    padding-top: 57px;
+}
+
+.horizontal_plate > .focus_text {
+    height: 120px;
+}
+
+.horizontal_plate > h2 {
+    line-height: 1;
+    height: 37px;
+}
+
+.variants_mosaic > .call_back {
+    padding: 25px 25px !important;
+    border: #ff5f01 solid 5px;
+    background-color: #ffffff;
+}
+
+.variants_mosaic > .call_back > h2 {
+    font-size: 25px;
+    color: #202020 !important;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.callback_fields {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.field100 {
+    width: calc(100% - 5px)
+}
+
+.field50 {
+    width: calc(50% - 10px)
+}
+
+.callback_fields button {
+    font-size: 12px;
+    padding: 10px 15px;
+    background-color: #ff5f01;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+.callback_fields textarea {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.callback_fields input[type="text"] {
+    font-size: 14px;
+}
+
+.confirmation {
+    font-size: 12px;
+    font-family: "Open Sans";
+    color: rgb(32, 32, 32);
+    line-height: 1.167;
+    text-align: left;
+    width: 200px;
+}
+
+.variants_mosaic > .call_back > input {
+    border-color: #202020;
+}
+
+.ideas_block {
+    padding-bottom: 90px;
+}
+
+.ideas_block > h1 {
+    padding: 65px 0 45px 0;
+}
+
+.ideas_block > .ideas_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.idea_image:hover > button {
+    display: block;
+}
+
+.idea_image:hover > img {
+    opacity: 0.6;
+}
+
+.idea_image {
+    position: relative;
+    background-color: #202020;
+    height: 240px;
+    cursor: pointer;
+}
+
+.idea_image > img {
+    position: relative;
+    width: 100%;
+}
+
+.idea_image > button {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 65px);
+    color: rgb(255, 255, 255);
+    background-color: #4d59a1;
+    display: none;
+}
+
+.ideas_item > .idea_title {
+    display: block;
+    width: 100%;
+    padding: 22px 0;
+    margin-top: 2px;
+    background-color: #e6e6e6;
+    color: #202020;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: bold;
+}
+
+.parameters_block > h1 {
+    padding: 63px 0 32px 0;
+}
+
+.parameters_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 158px;
+}
+.parameters_item {
+    position: relative;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    width: 360px;
+    height: 480px;    
+}
+
+.parameters_wrap {
+    width: 300px;
+    position: absolute;
+    top: -158px;
+    left: calc(50% - 150px);
+}
+
+.parameters_wrap > .parameter_image {
+    display: flex;
+    justify-content: center;
+}
+
+.parameters_wrap > h2 {
+    display: block;
+    padding: 20px 0;
+    font-family: 'MuseoCyrl-700';
+    font-size: 25px;
+    color: rgb(32, 32, 32);
+    line-height: normal;
+    text-align: center;
+}
+
+td {
+    border: none;
+    border-collapse: collapse;
+    padding: 6px 0 6px 0;
+    font-size: 14px;
+    font-family: "Open Sans";
+    border-bottom: #202020 dashed 1px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.parameter_table > table tr:last-child > td {
+    border: none;    
+}
+
+.parameter_table > table td:last-child {
+    color: #4d59a1;
+    font-weight: bold;
+    width: 70px; 
+}
+
+.cladding_prices_block {
+    padding-bottom: 51px;
+}
+
+.cladding_prices_block > h1 {
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.cladding_price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 45px;
+}
+
+.price_info {
+    width: 100%;
+    max-width: 450px;
+    padding: 28px 0;
+}
+
+.price_graphics {
+    background-color: #2f3a81;
+    width: 100%;
+    max-width: 360px;
+    height: 430px;
+}
+
+.price_info_wrap {
+    position: relative;
+    background-color: #ffF;
+    height: 100%;
+    padding: 50px 25px 0 50px;
+}
+
+.price_info_wrap > h2 {
+    padding: 0 0 25px 0;
+    text-align: left;
+}
+
+.price_description {
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(32, 32, 32);
+    line-height: 1.429;
+}
+
+.price_string {
+    margin-top: 10px;
+}
+
+.price_info_wrap > button {
+    position: absolute;
+    left: 52px;
+    bottom: 56px;
+    background-color: #ff5f01;
+    color: #ffffff
+}
+
+.price_plan_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.price_graphics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #ffffff;
+}
+
+.price_graphics > h3 {
+    font-size: 20px;
+    font-family: "Open Sans";
+    line-height: 1;
+    font-weight: normal;
+}
+
+.installments_fon {
+    width: 100%;
+    background-image: url("../img/installments_fon.png");
+    background-repeat: no-repeat;
+    background-position-x: calc(50% + 270px);
+    background-position-y: 50%;
+    background-color: #ff5f01;
+    /* height: 255px; */
+}
+
+.installments_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.installments_buttons {
+    width: 100%;
+    max-width: 450px;
+    padding: 35px 30px;
+}
+
+.installments_buttons > h1 {
+    text-align: left;
+    line-height: 1.3;
+    font-size: 42px;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.installments_buttons button {
+    margin: 0;
+    text-transform: none !important;
+    background-color: #ff7e32;
+    color: #ffffff;
+    border: #e6e6e6 solid 1px;
+    border-radius: 0;
+    padding: 15px 15px;
+    font-size: 16px;
+}
+
+.installments_buttons button:hover {
+    background-color: #ffffff;
+    color: #ff7e32;
+}
+
+.digits_table {
+    max-width: 720px;
+    width: 100%;
+    padding: 30px 40px 20px 40px;
+}
+
+.digits_table td {
+    font-family: "MuseoCyrl-700";
+    text-align: center;
+    color:#ffffff;
+    border: 0;
+    width: 20%;
+}
+
+.digits_table > table tr:first-child > td {
+    font-size: 120px;    
+}
+
+.digits_table > table tr:last-child > td {
+    font-size: 16px;    
+}
+
+/****************************************************/
+@media screen and (max-width: 1169px) 
+{
+
+.gray_half_fon {
+    background-image: none;
+}
+
+.cladding_item {
+    width: 320px;
+}
+
+.parameters_wrap {
+    position: relative;
+}
+
+.parameters_wrap {
+    top: 0;
+}
+
+.parameters_items {
+    margin-top: 0;
+}
+
+.parameters_item {
+    height: auto;
+    padding-bottom: 50px;
+}
+
+}
+
+@media screen and (max-width: 959px) 
+{ 
+
+.variants_mosaic > .call_back {
+    height: auto !important;
+}
+
+.confirmation {
+    width: 100%;
+}
+
+.price_info_wrap > button {
+    position: relative;
+    margin: 25px 0;
+    left: 0;
+    bottom: 0;
+}
+
+}
+
+/****************************************************/
+@media screen and (max-width: 575px) 
+{ 
+
+h1 {
+    font-size: 32px;
+    line-height: normal;
+}
+
+.cladding_block > h1 {
+    padding: 30px 0;
+}
+
+cladding_items {
+    gap: 10px;
+}
+
+.cladding_item > h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cladding_item {
+    padding-bottom: 25px;
+}
+
+.variants_block > h1 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.variants_mosaic > .call_back > h2 {
+    font-size: 24px;
+    line-height: normal;
+}
+
+.variants_mosaic {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.mosaic_item > .price {
+    display: block;
+}
+
+.mosaic_item > button {
+    display: none;
+}
+
+.horizontal_plate {
+    padding-top: 25px;
+}
+
+.horizontal_plate > h2 {
+    height: 65px;
+}
+
+.ideas_block > h1 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.ideas_block > .ideas_items {
+    gap: 20px;
+}
+
+.ideas_block {
+    padding-bottom: 40px;
+}
+
+.ideas_item {
+    width: 320px;
+}
+
+.idea_image {
+    width: 320px;
+    height: 207px;
+}
+
+.idea_title {
+    font-size: 18px;
+}
+
+.parameters_block > h1 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.cladding_prices_block > h1 {
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+
+.cladding_prices_block {
+    padding-bottom: 30px;
+}
+
+.digits_table > table tr:first-child > td {
+    font-size: 70px;
+}
+
+
+
+}
